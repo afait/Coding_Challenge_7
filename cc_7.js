@@ -33,3 +33,35 @@ const calculateLoyaltyDiscount = (amount, years) => { // Creates an arrow functi
 
 calculateLoyaltyDiscount(100, 6); // Calculates the Discounted price using the function if price is 100 and years is 6
 calculateLoyaltyDiscount(200, 2); // Calculates the Discounted price using the function if price is 200 and years is 2
+
+
+// Task 4 - Product Shipping Cost Calculation
+
+function calculateShippingCost(weight, location, expedited = false) {
+    let originalCost = 0;
+    let perlbcost = 0;
+    let expeditedCost = 0;
+// Create a function to calculate the shipping cost with a base cost, per lb cost, and expedited Cost
+    if (location === "USA") {
+        originalCost = 5; 
+        perlbcost = 0.5;
+    } // Makes the base cost 5 with a 0.5 per pound cost if the location is the USA
+    else if (location === "Canada") {
+        originalCost = 10; 
+        perlbcost = 0.7;
+    } // Makes the base cost 10 with a 0.7 per pound cost if the location is Canada
+
+    if (expedited === true) {
+        expeditedCost = 10;
+    }
+    else {
+        expeditedCost = 0
+    }; // Adds on an expedited cost of 10 if expedited is true
+
+    let TotalShippingCost = (originalCost + (weight * perlbcost) + expeditedCost); 
+    // Calculates the total shipping cost by adding the original cost, + the calculated weight cost by multiplying weight and perlbcost, and adding expeditedCost if present
+    return console.log(`Shipping Cost: $${TotalShippingCost.toFixed(2)}`);
+} // Logs the Total shipping cost to two decimal places
+
+    calculateShippingCost(10, "USA", true); // Calculates the shipping cost for a 10lb item in the USA with expedited shipping
+    calculateShippingCost(5, "Canada", false); // Calculates the shipping cost for a 5lb item in Canada without expedited shipping
