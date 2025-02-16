@@ -76,3 +76,12 @@ function calculateLoanInterest(principal, rate, year) { // Created a function th
 
 calculateLoanInterest(1000, 0.05, 3); // Calculates the loan interest for a $1000 principal at a 5% rate for 3 years
 calculateLoanInterest(5000, 0.07, 5); // Calculates the loan interest for a $5000 principal at a 7% rate for 5 years
+
+
+// Task 6 - Filtering High-Value Transactions
+
+const transactions = [500, 1200, 3000, 800, 2200];
+function filterHighValueTransactions(transactions, filterFunction) {
+    return transactions.filter(filterFunction);
+}
+console.log(HighValueTransactions = transactions.filter(transactions => transactions >= 1000));
