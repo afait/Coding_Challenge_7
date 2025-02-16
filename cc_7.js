@@ -65,3 +65,14 @@ function calculateShippingCost(weight, location, expedited = false) {
 
     calculateShippingCost(10, "USA", true); // Calculates the shipping cost for a 10lb item in the USA with expedited shipping
     calculateShippingCost(5, "Canada", false); // Calculates the shipping cost for a 5lb item in Canada without expedited shipping
+
+
+// Task 5 - Business Loan Interest Calculation
+
+function calculateLoanInterest(principal, rate, year) { // Created a function that calculates loan interest using a given principal amount, rate, and years
+    let Interest = (principal * rate * year);
+    console.log(`Total Interest: $${(Interest).toFixed(2)}`);
+} // Function logs the total interest found by multiplying the principal by the rate and the year
+
+calculateLoanInterest(1000, 0.05, 3); // Calculates the loan interest for a $1000 principal at a 5% rate for 3 years
+calculateLoanInterest(5000, 0.07, 5); // Calculates the loan interest for a $5000 principal at a 7% rate for 5 years
