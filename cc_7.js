@@ -100,3 +100,17 @@ function createBudgetTracker() { // Created a function to track the budget with 
 let budget = createBudgetTracker();
 console.log(budget(300)); // Logs the budget amount after $300 is used
 console.log(budget(200)); // Logs the budget amount after $200 more are used
+
+
+// Task 8 - Business Growth Projection
+
+function calculateGrowth(years, revenue) { // Created a function that projects growth using the years and revenue
+    if (years === 10) // Stops compounding growth once year reaches 10
+        return (`Projected Revenue $${revenue.toFixed(2)}`); // Calculates the revenue and rounds to two deciaml places
+
+    return calculateGrowth(years + 1, revenue * 1.05); //Calculates the growth adding 5% revenue each year
+
+    }
+
+console.log(calculateGrowth(8, 1000)); // Projects growth in 8 years for revenue starting at $1000
+console.log(calculateGrowth(5, 5000)); // Projects growth in 5 years for revenue starting at $5000
