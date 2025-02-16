@@ -80,8 +80,23 @@ calculateLoanInterest(5000, 0.07, 5); // Calculates the loan interest for a $500
 
 // Task 6 - Filtering High-Value Transactions
 
-const transactions = [500, 1200, 3000, 800, 2200];
+const transactions = [500, 1200, 3000, 800, 2200]; // Created an array with 5 transaction values
 function filterHighValueTransactions(transactions, filterFunction) {
     return transactions.filter(filterFunction);
+} // Created a function that filters out any transactions that fit the filter
+console.log(HighValueTransactions = transactions.filter(transactions => transactions >= 1000)); // Filters out any functions that are greater than or equal to 1000
+
+
+// Task 7 - Budget Tracker
+
+function createBudgetTracker() { // Created a function to track the budget with a starting budget of 0
+    let totalBudget = 0;
+
+    return function(budget) {
+        totalBudget -= budget;
+        return `Current Balance: $${totalBudget}`;
+    }; // Function subtracts budget amount from the starting total budget
 }
-console.log(HighValueTransactions = transactions.filter(transactions => transactions >= 1000));
+let budget = createBudgetTracker();
+console.log(budget(300)); // Logs the budget amount after $300 is used
+console.log(budget(200)); // Logs the budget amount after $200 more are used
